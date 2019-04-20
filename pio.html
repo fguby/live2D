@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <title>Live2D SampleApp1</title>
+        </meta>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=1.0, maximum-scale=4.0">
+        </meta>
+
+        <style>
+            html, body {
+                oveflow: hidden;
+                height: 100%;
+            }
+            
+            body{
+                margin:0px ;
+                padding:0px ;
+            }
+            
+            button {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 14px;
+                color: #ffffff;
+                padding: 10px 20px;
+                -moz-border-radius: 30px;
+                -webkit-border-radius: 30px;
+                border-radius: 30px;
+                -moz-box-shadow:
+                    0px 1px 3px rgba(0,0,0,0.5),
+                    inset 0px 0px 1px rgba(255,255,255,0.7);
+                -webkit-box-shadow:
+                    0px 1px 3px rgba(0,0,0,0.5),
+                    inset 0px 0px 1px rgba(255,255,255,0.7);
+                box-shadow:
+                    0px 1px 3px rgba(0,0,0,0.5),
+                    inset 0px 0px 1px rgba(255,255,255,0.7);
+                text-shadow:
+                    0px -1px 0px rgba(0,0,0,0.4),
+                    0px 1px 0px rgba(255,255,255,0.3);
+            }
+
+            button.active {
+                background: linear-gradient(
+                    to bottom, 
+                    #3498db, 
+                    #2980b9);
+                background: -moz-linear-gradient(
+                    top,
+                    #3498db 0%,
+                    #2980b9);
+                background: -webkit-gradient(
+                    linear, left top, left bottom,
+                    from(#3498db),
+                    to(#2980b9));
+                border: 1px solid #2980b9;
+            }
+            
+            button.inactive {
+                background: linear-gradient(
+                    to bottom, 
+                    #e74c3c, 
+                    #c0392b);
+                background: -moz-linear-gradient(
+                    top,
+                    #e74c3c 0%,
+                    #c0392b);
+                background: -webkit-gradient(
+                    linear, left top, left bottom,
+                    from(#e74c3c),
+                    to(#c0392b));
+                border: 1px solid #c0392b;
+            }
+        </style>
+
+    </head>
+
+    <body onload="InitLive2D()">
+        
+        <p>
+            <button id="btnTexure" class="active" >换件衣服吧</button>
+        </p>
+        
+        <div>
+            <canvas id="mycanvas" width="300" height="500" 
+                style="border:dashed 1px #CCC;">
+            </canvas>
+        </div>
+        
+
+        <!-- Live2D Library -->
+        <script src="js/live2d.min.js"></script>
+        
+        <script>
+            var LAppDefine = {   
+                // 调试，true时会在console里显示日志
+                DEBUG_LOG : true,
+                DEBUG_MOUSE_LOG : false, // 鼠标相关日志   
+                //  全部设定    
+                //这里配置canvsa元素的id
+                CANVAS_ID : "mycanvas",
+                //是否开启滚轮缩放，默认true
+                IS_SCROLL_SCALE : true,
+                // 画面最大缩放级别
+                VIEW_MAX_SCALE : 2,
+                // 画面最小缩放级别
+                VIEW_MIN_SCALE : 0.8,
+
+                VIEW_LOGICAL_LEFT : -1,
+                VIEW_LOGICAL_RIGHT : 1,
+
+                VIEW_LOGICAL_MAX_LEFT : -2,
+                VIEW_LOGICAL_MAX_RIGHT : 2,
+                VIEW_LOGICAL_MAX_BOTTOM : -2,
+                VIEW_LOGICAL_MAX_TOP : 2,
+                
+                // 动作优先级常量
+                PRIORITY_NONE : 0,
+                PRIORITY_IDLE : 1,
+                PRIORITY_NORMAL : 2,
+                PRIORITY_FORCE : 3,
+
+                //是否绑定切换模型按钮
+                IS_BIND_BUTTON : false,
+                //绑定按钮元素id
+                BUTTON_ID : "Change",
+                //是否开启模型切换完成之前禁止按钮点击的选项，默认为true
+                IS_BAN_BUTTON : true,
+                //设置按钮禁止状态时的class，可自定义样式，前提是IS_BAN_BUTTON为true
+                BAN_BUTTON_CLASS : "inactive",
+                //设置按钮正常状态时的class
+                NORMAL_BUTTON_CLASS : "active",
+                //衣服切换模式 目前只支持两种 sequence-顺序 random-随机
+                //需事先配置好json文件里的textures属性
+                //暂不支持保存功能
+                TEXURE_CHANGE_MODE : "sequence",
+                IS_START_TEXURE_CHANGE : true,
+                TEXURE_BUTTON_ID : "btnTexure",
+                /**
+                 *  模型定义
+                    自定义配置模型，同一数组内放置两个模型则为开启双模型
+                    三模型也只取数组里的前两个
+                    模型出现的顺序与数组一致
+                    这里请用相对路径配置
+                */
+                MODELS:
+                [
+                    ["model/Pio/model.json"]
+                ],
+
+                // 与外部定义的json文件匹配
+                MOTION_GROUP_IDLE : "idle", // 空闲时
+                MOTION_GROUP_TAP_BODY : "tap_body", // 点击身体时
+                MOTION_GROUP_FLICK_HEAD : "flick_head", // 抚摸头部
+                MOTION_GROUP_PINCH_IN : "pinch_in", // 放大时
+                MOTION_GROUP_PINCH_OUT : "pinch_out", // 缩小时
+                MOTION_GROUP_SHAKE : "shake", // 摇晃
+                //如果有自定义的动作分组可以放在这里
+
+                // 与外部定义json文件相匹配
+                HIT_AREA_HEAD : "head",
+                HIT_AREA_BODY : "body",
+                
+                //关于各个事件触发的表情可以用动作常量优先级来取代
+            };
+        </script>
+    </body>
+</html>
