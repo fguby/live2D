@@ -48,22 +48,26 @@ git clone https://github.com/fguby/live2D.git
 
 ### 页面引用
 
-<h6>1️⃣引入核心文件,例如</h6>
-
-```html
-<script src="js/live2d.min.js"></script>
-
-```
-<h6>2️⃣引入配置项js文件。</h6>
+<h6>1️⃣引入配置文件,例如</h6>
 
 ```html
 <script src="js/LAppDefine.js"></script>
+
+```
+<h6>2️⃣引入核心依赖文件。</h6>
+
+```html
+<script src="js/live2d.min.js"></script>
 ```
 
 <h6>3️⃣html页面放置对应的canvas，例如这样：</h6>
 
 ```html
 <canvas id="mycanvas" width="300" height="500"></canvas>
+```
+<h6>如果要使用音频播放，页面还需要放置一个audio</h6>
+```html
+<audio id="my_audio"></audio>
 ```
 
 <h6>4️⃣调用初始化的函数,例如：</h6>
@@ -325,6 +329,21 @@ model.startAppointMotion("start",3,1);
 </font>
 </html>
 
+> #### <span>关于音频播放的问题。</span>
+
+<html>
+<font style="font-size:14px;color:#9FB6CD;">
+修复了之前在微信以及手机浏览器上声音播放不出来的问题，git 一份最新版本的代码应该就没问题了，另外LAppDefine.js配置文件里我新增了两个字段，是和音频配套使用的。(注意，请参考页面引用里提到的步骤，页面手动放置一个audio元素。)
+
+```javascript
+IS_PLAY_AUDIO : true,  //新增属性，是否播放音频 默认为true
+AUDIO_ID : "my_audio" //新增属性，audio标签id值 
+
+```
+
+</font>
+</html>
+
 #### 未完待续。。。
 
 ---
@@ -346,11 +365,17 @@ model.startAppointMotion("start",3,1);
 一 [来吧，传送门](https://github.com/fguby/live2D/blob/master/README-MESSAGE.md "message")
 
 ##### 2.优化模型加载速度。
+嗯，看了一下，主要是图片加载速度太慢，回头我抽时间优化一下。
 
 ##### 3.实现可拖拽。
+这个功能目前还没有特别大的开发欲望。
 
 ##### 4.开发一个简单页面，方便查看模型具体每个mtn动作文件的样式。
+这个还在考虑中，实现起来虽然不难，主要是懒癌症犯了。。。
+
 ##### 5.优化手机浏览器查看的效果。(主要是手机浏览器上似乎没有声音？)
+这个问题已解决，重新git一份代码，按照音频步骤配置一下即可，具体请往上翻。
+
 ##### 6.提供一个默认的css样式文件。(方便那些比较懒的同学们。)
 
 #### 👅如果有什么建议，可以留言给我。我会在闲暇时间里争取快速开发完剩下的功能，让这个初具雏形的插件变得完善起来。
