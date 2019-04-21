@@ -338,9 +338,36 @@ model.startAppointMotion("start",3,1);
 
 一 [一个不错的模型分享网站，梦象](https://mx-model.ga/page/1/ "梦象")
 
+
+
+### 后续准备开发的内容
+
+<html>
+    <p style="font-size:16px">
+        1.鼠标悬浮弹出消息，或者试试智能聊天？
+    </p>
+    <p style="font-size:16px">
+        2.优化模型加载速度。
+    </p>
+    <p style="font-size:16px">
+        3.实现可拖拽。
+    </p>
+    <p style="font-size:16px">
+        4.开发一个简单页面，方便查看模型具体每个mtn动作文件的样式。
+    </p>
+    <p style="font-size:16px">
+        5.优化手机浏览器查看的效果。(主要是手机浏览器上似乎没有声音？)
+    </p>
+    <p style="font-size:16px">
+        6.提供一个默认的css样式文件。(方便那些比较懒的同学们。)
+    </p>
+    <span style="color:#8600FF">如果有什么建议，可以留言给我。我会在闲暇时间里争取快速开发完剩下的功能，让这个初具雏形的插件变得完善起来。</span>
+    <br>
+</html>
 <br>
 
+> <font color="red">欢迎fork以及pull request
 >
 > 跪求✨⭐🌟💫💥💥
 >
->(°ー°〃)
+> (°ー°〃)
