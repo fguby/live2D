@@ -19,4 +19,4 @@
 
 效果如图
 
-![image](http://note.youdao.com/yws/res/1009/47046EA0CDC449F8B9E6F9C50416DEC8)
+![avatar](img/jiateng.jpg)
