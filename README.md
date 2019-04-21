@@ -35,7 +35,7 @@
 
 ### 快速开始
 
-<h6>1⃣ 直接使用git命令下载。</h6>
+<h6>🅰️  直接使用git命令下载。</h6>
 
 
 ```
@@ -43,7 +43,7 @@ git clone https://github.com/fguby/live2D.git
 ```
 
 
-<h6>2⃣ 下载压缩包，然后解压。</h6>
+<h6>🅱️直接下载压缩包，然后解压。</h6>
 
 
 ### 页面引用
@@ -76,7 +76,7 @@ git clone https://github.com/fguby/live2D.git
 
 > YES.😑
 
-或者，请看看自己具体项目里的路径，然后进行修改？
+设置成debug模式，打开浏览器的console ，或者，请看看自己具体项目里的路径，然后进行修改？
 
 ---
 
@@ -136,6 +136,10 @@ MODELS:
 ```
 
 ###### MODELS里的每一个数组成员即使配置超出两个的模型，也只会取前两个，另外双模型的加载现在暂不支持换衣功能。
+
+> 除此之外，或许还需要略微修改model.json文件，参考如何修改模型在canvas元素里显示的位置。
+
+[传送门(＠_＠;)](#this)
 
 <br>
 
@@ -210,7 +214,7 @@ model.startAppointMotion("start",3,10);
 ```
 > 这个“idle”所代表的就是一系列动作的数组,使用live2D官方的live 2D Viewer可以很方便的查看每个mtn文件所代表的动作是什么。
 
-一 [live2D viewer传送门](https://www.baidu.com/s?wd=live2D%20Viewer "live2D")
+一 [live2D viewer传送门](http://www.midoriya.co:8088/static/xiaomai.html "live2D")
 
 另外，我所默认的空闲状态的模型表情以及动作的切换都是在idle动作组里随机触发。
 
@@ -277,9 +281,65 @@ model.startAppointMotion("start",3,1);
 > - 空闲时间太久可以手动触发哭泣表情，在这基础上可以开发与评论、聊天等系统连接的事件。
 > - 等等等。
 
+
+---
+
+### 常见问题
+
+<br>
+
+> #### 如何配置模型初始化时的大小？
+
+<html>
+<font style="font-size:14px;color:#9FB6CD;">
+修改LAppDefine.js文件里的SCALE属性即可。(可关闭滚轮事件。)
+</font>
+<br>
+</html>
+
+
+<br>
+
+> #### <span id="this">如何修改模型在canvas元素里显示的位置？</span>
+
+<html>
+<font style="font-size:14px;color:#9FB6CD;">
+手动修改model.json layout属性里的center_x属性即可。
+如果要设置双模型，可以将一个模型的center_x设为0.5，另外一个设置为-0.5，这样可以避免重叠。
+</font>
+<br>
+</html>
+
+<br>
+
+> #### <span>如何给模型自配置一些声音？</span>
+
+<html>
+<font style="font-size:14px;color:#9FB6CD;">
+可以把自己想要播放的声音文件放置到对应model的文件夹里，在model.json文件里的motion属性中，将想要播放声音的动作配置上对应的声音文件路径即可，例如：
+
+```
+{ "file":"motions/tapBody_00.mtn" , "sound":"sounds/tapBody_00.mp3"},
+```
+
+</font>
+</html>
+
 #### 未完待续。。。
 
-> 2019.04.21 00:30
+---
+
+### 关于模型文件
+
+我内置了几套模型，包括官方给的几个免费版模型，干物妹小埋，药水制作师小萝莉(配备119套衣服)，目前正在配置路人女主养成方法圣女惠的模型，剩下的还有一些，我整理后会在近期上传，敬请期待。
+
+
+一 [猫与向日葵](https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-01 "猫与向日葵")
+
+一 [一个不错的模型分享网站，梦象](https://mx-model.ga/page/1/ "梦象")
+
+<br>
+
 >
 > 跪求✨⭐🌟💫💥💥
 >
