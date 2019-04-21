@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <title>加藤惠</title>
+        </meta>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=1.0, maximum-scale=4.0">
+        </meta>
+
+        <style>
+            html, body {
+                oveflow: hidden;
+                height: 100%;
+            }
+            
+            body{
+                margin:0px ;
+                padding:0px ;
+            }
+            .message {
+                opacity: 0;
+                width: 300px;
+                height: auto;
+                margin: auto;
+                padding: 7px;
+                top: -80px;
+                left: -10px;
+                text-align: center;
+                border: 1px solid rgba(255,137,255,.4);
+                border-radius: 12px;
+                background-color: rgba(255,137,255,.2);
+                box-shadow: 0 3px 15px 2px rgba(255,137,255,.4);
+                font-size: 13px;
+                font-weight: 400;
+                text-overflow: ellipsis;
+                text-transform: uppercase;
+                overflow: hidden;
+                position: absolute;
+                animation-delay: 5s;
+                animation-duration: 50s;
+                animation-iteration-count: infinite;
+                animation-name: shake;
+                animation-timing-function: ease-in-out;
+            }
+            #landlord {
+                user-select: none;
+                position: fixed;
+                left: 30px;
+                bottom: 0;
+                width: 280px;
+                height: 400px;
+                z-index: 10000;
+                font-size: 0;
+                transition: all .3s ease-in-out;
+            }
+            .searchbox{
+                position: fixed;
+                left:40%;
+                top:30%;
+                width: 200px;
+                height: 30px;
+                border-radius: 2px;
+            }
+        </style>
+
+    </head>
+
+    <body onload="InitLive2D()">
+
+        <input class="searchbox" placeholder="这是一个搜索框"/>
+        <div id="landlord">
+            <div class="message" style="opacity:0.2;margin-top:20px;"></div>
+            <canvas id="mycanvas" width="300" height="400"></canvas>
+        </div>
+
+        <script type="text/javascript">
+            var message_Path = '/static/'
+            var home_Path = 'http://localhost:8088/static/live2D.html'  //此处修改为你的域名，必须带斜杠
+        </script>
+        <!-- Live2D Library -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/live.js"></script>
+        <script src="js/LAppDefine.js"></script>
+        <script src="js/message.js"></script>
+    </body>
+</html>
