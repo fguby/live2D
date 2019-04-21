@@ -50,13 +50,13 @@ git clone https://github.com/fguby/live2D.git
 
 <h6>1️⃣引入核心文件,例如</h6>
 
-```javascript
+```html
 <script src="js/live2d.min.js"></script>
 
 ```
 <h6>2️⃣引入配置项js文件。</h6>
 
-```javascript
+```html
 <script src="js/LAppDefine.js"></script>
 ```
 
