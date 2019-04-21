@@ -77,7 +77,7 @@
     </head>
 
     <body onload="InitLive2D()">
-        
+            <audio id="my_audio"></audio>
         <p>
             <button id="btnTexure" class="active" >换件衣服吧</button>
         </p>
@@ -162,7 +162,12 @@
                 HIT_AREA_HEAD : "head",
                 HIT_AREA_BODY : "body",
                 
-                //关于各个事件触发的表情可以用动作常量优先级来取代
+                //初始化的模型大小
+                SCALE : 1.0,
+                //新增属性，是否播放音频 默认为true
+                IS_PLAY_AUDIO : true,
+                //新增属性，audio标签id值   
+                AUDIO_ID : "my_audio"
             };
         </script>
     </body>
