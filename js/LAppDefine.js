@@ -21,6 +21,7 @@ var LAppDefine = {
     VIEW_LOGICAL_MAX_TOP : 2,
     
     // 动作优先级常量
+    //关于各个事件触发的表情可以用动作常量优先级来取代
     PRIORITY_NONE : 0,
     PRIORITY_IDLE : 1,
     PRIORITY_NORMAL : 2,
@@ -73,5 +74,6 @@ var LAppDefine = {
     HIT_AREA_HEAD : "head",
     HIT_AREA_BODY : "body",
     
-    //关于各个事件触发的表情可以用动作常量优先级来取代
+    //初始化的模型大小
+    SCALE : 1.0
 };
