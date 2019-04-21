@@ -75,5 +75,9 @@ var LAppDefine = {
     HIT_AREA_BODY : "body",
     
     //初始化的模型大小
-    SCALE : 1.0
+    SCALE : 1.0,
+    //新增属性，是否播放音频 默认为true
+    IS_PLAY_AUDIO : true,
+    //新增属性，audio标签id值   
+    AUDIO_ID : "my_audio"
 };
