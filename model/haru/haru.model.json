@@ -4,9 +4,9 @@
 	"model":"haru_01.moc",
 	"textures":
 	[
-		"haru_01.1024/texture_00.png",
-		"haru_01.1024/texture_01.png",
-		"haru_01.1024/texture_02.png"
+		"haru_01.1024/texture2.png",
+		"haru_01.1024/texture1.png",
+		"haru_01.1024/texture0.png"
 	],
 	"physics":"haru.physics.json",
 	"pose":"haru.pose.json",
