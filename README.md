@@ -30,6 +30,15 @@
 
 一 [药水制作师：快速换装小萝莉](http://www.midoriya.co:8088/static/pio.html "live2D")
 
+一 [路人女主养成方法：加藤惠](http://www.midoriya.co:8088/static/katou.html "live2D")
+
+一 [从零开始的异世界生活：蕾姆](http://www.midoriya.co:8088/static/rem.html "live2D")
+
+一 [NEW GAME! 凉风青叶](http://www.midoriya.co:8088/static/liang.html "live2D")
+
+一 [情色漫画老师：和泉纱雾](http://www.midoriya.co:8088/static/sagiri.html "live2D")
+
+> 有的页面加载较快，是因为png图片已经压缩过。
 
 ---
 
@@ -366,7 +375,9 @@ AUDIO_ID : "my_audio" //新增属性，audio标签id值
 一 [来吧，传送门](https://github.com/fguby/live2D/blob/master/README-MESSAGE.md "message")
 
 #### 2.优化模型加载速度。
-嗯，看了一下，主要是图片加载速度太慢，回头我抽时间优化一下。
+~~嗯，看了一下，主要是图片加载速度太慢，回头我抽时间优化一下。~~
+
+图片压缩可以有效解决这个问题。（需要你手动完成。）
 
 #### 3.实现可拖拽。
 这个功能目前还没有特别大的开发欲望。
