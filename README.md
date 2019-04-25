@@ -42,7 +42,8 @@
 
 > 有的页面加载较快，是因为png图片已经压缩过。
 
-### mac应用里的示例图（还在开发中，即将上线。）
+### mac应用里的示例图
+#### 一 [Elf小精灵传送门](https://github.com/fguby/Elf "Elf")
 ![avatar](img/xiaomai.gif)
 ---
 
