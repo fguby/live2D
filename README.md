@@ -22,27 +22,26 @@
 
 <h6>简单的几个页面示例</h6>
 
+一 [二次元姐妹花](http://www.susheyougou.club:8088/static/sisters.html "live2D")
 
-一 [二次元姐妹花](http://www.midoriya.co:8088/static/sisters.html "live2D")
-
-一 [干物妹小埋：お兄ちゃん](http://www.midoriya.co:8088/static/xiaomai.html "live2D")
+一 [干物妹小埋：お兄ちゃん](http://www.susheyougou.club:8088/static/xiaomai.html "live2D")
 
 
-一 [多模型装载，点击按钮可切换](http://www.midoriya.co:8088/static/live2D.html "live2D")
+一 [多模型装载，点击按钮可切换](http://www.susheyougou.club:8088/static/live2D.html "live2D")
 
-一 [药水制作师：快速换装小萝莉](http://www.midoriya.co:8088/static/pio.html "live2D")
+一 [药水制作师：快速换装小萝莉](http://www.susheyougou.club:8088/static/pio.html "live2D")
 
-一 [路人女主养成方法：加藤惠](http://www.midoriya.co:8088/static/katou.html "live2D")
+一 [路人女主养成方法：加藤惠](http://www.susheyougou.club:8088/static/katou.html "live2D")
 
-一 [从零开始的异世界生活：蕾姆](http://www.midoriya.co:8088/static/rem.html "live2D")
+一 [从零开始的异世界生活：蕾姆](http://www.susheyougou.club:8088/static/rem.html "live2D")
 
-一 [NEW GAME! 凉风青叶](http://www.midoriya.co:8088/static/liang.html "live2D")
+一 [NEW GAME! 凉风青叶](http://www.susheyougou.club:8088/static/liang.html "live2D")
 
-一 [情色漫画老师：和泉纱雾](http://www.midoriya.co:8088/static/sagiri.html "live2D")
+一 [情色漫画老师：和泉纱雾](http://www.susheyougou.club:8088/static/sagiri.html "live2D")
 
 > 有的页面加载较快，是因为png图片已经压缩过。
 
-### mac应用里的示例图
+### 使用Electron开发的mac应用
 #### 一 [Elf小精灵传送门](https://github.com/fguby/Elf "Elf")
 ![avatar](img/xiaomai.gif)
 ---
@@ -51,7 +50,6 @@
 
 <h6>🅰️  直接使用git命令下载。</h6>
 
-
 ```
 git clone https://github.com/fguby/live2D.git
 ```
@@ -59,34 +57,28 @@ git clone https://github.com/fguby/live2D.git
 
 <h6>🅱️直接下载压缩包，然后解压。</h6>
 
-
 ### 页面引用
 
 <h6>1️⃣引入配置文件,例如</h6>
-
 ```html
 <script src="js/LAppDefine.js"></script>
 
 ```
 <h6>2️⃣引入核心依赖文件。</h6>
-
 ```html
 <script src="js/live2d.min.js"></script>
 ```
 
 <h6>3️⃣html页面放置对应的canvas，例如这样：</h6>
-
 ```html
 <canvas id="mycanvas" width="300" height="500"></canvas>
 ```
 <h6>如果要使用音频播放，页面还需要放置一个audio</h6>
-
 ```html
 <audio id="my_audio"></audio>
 ```
 
 <h6>4️⃣调用初始化的函数,例如：</h6>
-
 ```html
 <body onload="InitLive2D()">
 ```
@@ -121,7 +113,6 @@ TEXURE_BUTTON_ID | 换衣绑定的元素id属性，目前仅支持点击触发
 
 
 <h6>一个完整的LAppDefine.js里最重要的属性：</h6>
-
 ```
 MODELS:
 [
@@ -138,7 +129,6 @@ MODELS:
 > MODELS负责模型json文件的统一配置，如果想要配置自己的多个模型，只需要在这里进行添加即可。（单模型只需添加一个就好)
 
 <h6>❗这里的路径请使用相对路径配置，具体根据对应的实际情况自行配置。</h6>
-
 
 ---
 <br> 
@@ -199,12 +189,11 @@ TEXURE_BUTTON_ID : "button_id",
 
 > 另外需要注意，有些模型虽然配置了多个textures元素，但是是用数张图片配置一个模型，这类的模型目前不支持换衣功能。
 
-
 ---
 
 > #### 如何自定义表情、动作？
 
-一 [干物妹小埋：お兄ちゃん](http://www.midoriya.co:8088/static/xiaomai.html "live2D")
+一 [干物妹小埋：お兄ちゃん](http://www.susheyougou.club:8088/static/xiaomai.html "live2D")
 
 > 想要在对应事件里驱动模型产生对应动作以及表情可以点击上方链接参考，我在页面上放置了三个按钮，分别对应着小埋哭、拿可乐、拿薯片的动作和表情。
 
@@ -233,7 +222,7 @@ model.startAppointMotion("start",3,10);
 ```
 > 这个“idle”所代表的就是一系列动作的数组,使用live2D官方的live 2D Viewer可以很方便的查看每个mtn文件所代表的动作是什么。
 
-一 [live2D viewer传送门](http://www.midoriya.co:8088/static/xiaomai.html "live2D")
+一 [live2D viewer传送门](http://www.susheyougou.club:8088/static/xiaomai.html "live2D")
 
 另外，我所默认的空闲状态的模型表情以及动作的切换都是在idle动作组里随机触发。
 
@@ -299,7 +288,6 @@ model.startAppointMotion("start",3,1);
 > - 在周六日可以提高可乐、薯片动作的优先级，设定为经常触发。
 > - 空闲时间太久可以手动触发哭泣表情，在这基础上可以开发与评论、聊天等系统连接的事件。
 > - 等等等。
-
 
 ---
 
