@@ -60,19 +60,23 @@ git clone https://github.com/fguby/live2D.git
 ### 页面引用
 
 <h6>1️⃣引入配置文件,例如</h6>
+
 ```html
 <script src="js/LAppDefine.js"></script>
-
 ```
+
 <h6>2️⃣引入核心依赖文件。</h6>
+
 ```html
 <script src="js/live2d.min.js"></script>
 ```
 
 <h6>3️⃣html页面放置对应的canvas，例如这样：</h6>
+
 ```html
 <canvas id="mycanvas" width="300" height="500"></canvas>
 ```
+
 <h6>如果要使用音频播放，页面还需要放置一个audio</h6>
 ```html
 <audio id="my_audio"></audio>
@@ -113,6 +117,7 @@ TEXURE_BUTTON_ID | 换衣绑定的元素id属性，目前仅支持点击触发
 
 
 <h6>一个完整的LAppDefine.js里最重要的属性：</h6>
+
 ```
 MODELS:
 [
@@ -220,6 +225,7 @@ model.startAppointMotion("start",3,10);
 	......
 ]
 ```
+
 > 这个“idle”所代表的就是一系列动作的数组,使用live2D官方的live 2D Viewer可以很方便的查看每个mtn文件所代表的动作是什么。
 
 一 [live2D viewer传送门](http://www.susheyougou.club:8088/static/xiaomai.html "live2D")
