@@ -297,45 +297,28 @@ model.startAppointMotion("start",3,1);
 
 > #### 如何配置模型初始化时的大小？
 
-<html>
-<font style="font-size:14px;color:#9FB6CD;">
 修改LAppDefine.js文件里的SCALE属性即可。(可关闭滚轮事件。)
-</font>
-<br>
-</html>
-
 
 <br>
 
-> #### <span id="this">如何修改模型在canvas元素里显示的位置？</span>
+> #### 如何修改模型在canvas元素里显示的位置？
 
-<html>
-<font style="font-size:14px;color:#9FB6CD;">
 手动修改model.json layout属性里的center_x属性即可。
 如果要设置双模型，可以将一个模型的center_x设为0.5，另外一个设置为-0.5，这样可以避免重叠。
-</font>
-<br>
-</html>
 
-<br>
 
-> #### <span>如何给模型自配置一些声音？</span>
+> #### 如何给模型自配置一些声音？
 
-<html>
-<font style="font-size:14px;color:#9FB6CD;">
 可以把自己想要播放的声音文件放置到对应model的文件夹里，在model.json文件里的motion属性中，将想要播放声音的动作配置上对应的声音文件路径即可，例如：
 
 ```
 { "file":"motions/tapBody_00.mtn" , "sound":"sounds/tapBody_00.mp3"},
 ```
 
-</font>
-</html>
 
 > #### <span>关于音频播放的问题。</span>
 
-<html>
-<font style="font-size:14px;color:#9FB6CD;">
+
 修复了之前在微信以及手机浏览器上声音播放不出来的问题，git 一份最新版本的代码应该就没问题了，另外LAppDefine.js配置文件里我新增了两个字段，是和音频配套使用的。(注意，请参考页面引用里提到的步骤，页面手动放置一个audio元素。)
 
 ```javascript
@@ -344,8 +327,6 @@ AUDIO_ID : "my_audio" //新增属性，audio标签id值
 
 ```
 
-</font>
-</html>
 
 #### 未完待续。。。
 
